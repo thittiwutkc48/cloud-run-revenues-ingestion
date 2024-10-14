@@ -1,0 +1,41 @@
+# Python specific
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+venv/
+.env/
+.Python
+*.pyenv
+pip-log.txt
+pip-delete-this-directory.txt
+
+# MacOS specific
+.DS_Store
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Cloud Function local emulation files
+.local/
+
+# VSCode and IDE specific
+.vscode/
+.idea/
+
+# Test coverage reports
+htmlcov/
+.tox/
+.coverage
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
