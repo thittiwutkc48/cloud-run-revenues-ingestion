@@ -1,0 +1,17 @@
+steps:
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      - 'run'
+      - 'deploy'
+      - 'cloud-run-revenues-ingest-bigquery'
+      - '--image'
+      - 'gcr.io/$PROJECT_ID/cloud-run-revenues-ingest-bigquery'
+      - '--region'
+      - 'asia-southeast1'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'
+      - '--set-env-vars'
+      - 'PROJECT_ID=single-loyalty-platform,DATASET_ID=slp_grading_lz,BUCKET_NAME=slp-landing-bucket,TABLE_NAME=slp_grade_revenues,PREFIX_NAME_ST=slp-grading,PREFIX_NAME_ND=revenues'
+images:
+  - 'gcr.io/$PROJECT_ID/cloud-run-revenues-ingest-bigquery'
