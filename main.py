@@ -31,7 +31,7 @@ def ingest_revenues_data(cloud_event):
             print(f"Error creating external table for {file_name}: {e}")
     else:
         print(f"Ignoring file {file_name}. Only subfolder {prefix_name_nd} in {bucket_name} are processed.")
-        return
+        return 'sussess'
     
 
 #test
